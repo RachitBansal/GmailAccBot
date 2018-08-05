@@ -1,0 +1,34 @@
+
+# coding: utf-8
+
+# In[3]:
+
+
+from selenium import webdriver
+import time
+
+
+# In[5]:
+
+
+url = 'https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&flowName=GlifWebSignIn&flowEntry=SignUp'
+
+driver = webdriver.Chrome('/Users/rachitbansal/Downloads/chromedriver')
+driver.get(url)
+
+driver.find_element_by_id('firstName').send_keys('username')
+
+time.sleep(2)
+
+driver.find_element_by_id('lastName').send_keys('xxx')
+
+time.sleep(5)
+
+driver.find_element_by_id('username').click()
+
+time.sleep(1)
+
+#driver.find_element_by_class_name('whsOnd zHQkBf').send_keys('random123')
+
+#time.sleep(2)
+
